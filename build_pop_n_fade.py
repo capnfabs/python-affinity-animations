@@ -29,7 +29,7 @@ def generate_css():
                     @keyframes anim-{elem_id} {{
                         0%, {p(start_popout)} {{
                             opacity: 1;
-                            transform: none;
+                            transform: translate(0,0);
                         }}
                         {p(end_popout)}, {p(start_fadeout)} {{
                             opacity: 1;
