@@ -55,6 +55,12 @@ def main():
         svg = soup.find('svg')
         svg.insert(0, style_tag)
 
+        # while we're here, let's set a width so that it renders with
+        # a sensible default size when embedded in a webpage
+        # (there's an extremely detailed guide here:
+        # https://css-tricks.com/scale-svg)
+        svg.attrs['width'] = '585'
+
         # Write amended SVG to OUTPUT_DIRECTORY.
         with open(output_filename, 'w') as outfile:
             outfile.write(str(soup))
